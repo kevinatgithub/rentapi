@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4a663ce3-62da-4f9b-ba6e-17c0acb101bf": {
+      "ProjectGuid": "4a663ce3-62da-4f9b-ba6e-17c0acb101bf",
+      "DisplayName": "WenasRoomForRent.Api",
+      "ColorIndex": 0
+    },
+    "064c9704-3f7b-46df-8398-b245e7f8bfbf": {
+      "ProjectGuid": "064c9704-3f7b-46df-8398-b245e7f8bfbf",
+      "DisplayName": "WenasRoomForRent.Services",
+      "ColorIndex": 1
+    },
+    "29dd9e15-7cf5-4a72-9b8f-5d4751279c09": {
+      "ProjectGuid": "29dd9e15-7cf5-4a72-9b8f-5d4751279c09",
+      "DisplayName": "WenasRoomForRent.Repository",
+      "ColorIndex": 2
+    },
+    "290dd329-1158-41ff-8ece-a09688104c6c": {
+      "ProjectGuid": "290dd329-1158-41ff-8ece-a09688104c6c",
+      "DisplayName": "WenasRoomForRent.Domain",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

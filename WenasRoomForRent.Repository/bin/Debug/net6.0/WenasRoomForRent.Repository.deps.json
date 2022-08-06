@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "WenasRoomForRent.Repository/1.0.0": {
+        "dependencies": {
+          "WenasRoomForRent.Domain": "1.0.0"
+        },
+        "runtime": {
+          "WenasRoomForRent.Repository.dll": {}
+        }
+      },
+      "WenasRoomForRent.Domain/1.0.0": {
+        "runtime": {
+          "WenasRoomForRent.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WenasRoomForRent.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WenasRoomForRent.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,17 @@
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\WenasRoomForRent.Services.deps.json
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\WenasRoomForRent.Services.dll
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\ref\WenasRoomForRent.Services.dll
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\WenasRoomForRent.Services.pdb
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\WenasRoomForRent.Domain.dll
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\WenasRoomForRent.Repository.dll
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\WenasRoomForRent.Domain.pdb
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\WenasRoomForRent.Repository.pdb
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\WenasRoomForRent.Services.csproj.AssemblyReference.cache
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\WenasRoomForRent.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\WenasRoomForRent.Services.AssemblyInfoInputs.cache
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\WenasRoomForRent.Services.AssemblyInfo.cs
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\WenasRoomForRent.Services.csproj.CoreCompileInputs.cache
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\WenasRoomForRent.Services.csproj.CopyComplete
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\WenasRoomForRent.Services.dll
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\ref\WenasRoomForRent.Services.dll
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\WenasRoomForRent.Services.pdb

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "KM3sL2msshqfj6fTHhXAllgL9gvz0t/F+iLy+t1Q1nKZv/lO1DeZWs2HPtlRTMj9uMbDRYBhKk3aYXWXpLRg0A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cg255yl\\source\\repos\\wrfr\\WenasRoomForRent\\WenasRoomForRent\\WenasRoomForRent.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cg255yl\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\cg255yl\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\cg255yl\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\cg255yl\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\cg255yl\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\cg255yl\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
