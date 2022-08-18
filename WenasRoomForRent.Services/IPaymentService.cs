@@ -12,8 +12,6 @@ public interface IPaymentService
 
     public IEnumerable<Payment> FilterByPaidDate(DateTime? startDate, DateTime? endDate);
 
-    public IEnumerable<Payment> FilterByPaidDate(int month, int year);
-
     public IEnumerable<Payment> FilterByStatus(PaymentStatus status);
 
     public Payment GetById(int id);

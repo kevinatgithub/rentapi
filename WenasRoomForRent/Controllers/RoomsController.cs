@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WenasRoomForRent.Api.Filters;
 using WenasRoomForRent.Domain;
 using WenasRoomForRent.Services;
 
 namespace WenasRoomForRent.Api.Controllers;
 
+[RequestLogger]
 [Route("api/[controller]")]
 [ApiController]
 public class RoomsController : ControllerBase
@@ -17,6 +19,12 @@ public class RoomsController : ControllerBase
 
     [HttpGet]
     public IActionResult List() => Ok(roomService.GetAll());
+
+    [HttpGet("filterByProfileId/{id}")]
+    public IActionResult List(int id) => Ok(roomService.GetByProfileId(id));
+
+    [HttpGet("filterByName/{name}")]
+    public IActionResult FilterByName(string name) => Ok(roomService.GetByName(name));
 
     [HttpGet("{id}")]
     public IActionResult Get(int id) => Ok(roomService.GetById(id));

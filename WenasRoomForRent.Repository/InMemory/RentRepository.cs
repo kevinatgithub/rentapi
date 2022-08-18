@@ -29,6 +29,8 @@ public class RentRepository : IRentRepository
 
     public IEnumerable<Rent> GetAll() => context.Rents;
 
+    public IEnumerable<Rent> GetAllByRoomId(int id) => context.Rents.Where(r => r.roomId == id && r.Status == RentStatus.Active);
+
     public Rent GetById(int id) => context.Rents.FirstOrDefault(r => r.Id == id);
 
     public void Update(Rent rent)

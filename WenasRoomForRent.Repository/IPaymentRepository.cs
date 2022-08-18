@@ -7,8 +7,6 @@ public interface IPaymentRepository
     public IEnumerable<Payment> GetAll();
 
     public IEnumerable<Payment> FilterByPaidDate(DateTime? startDate, DateTime? endDate);
-    
-    public IEnumerable<Payment> FilterByPaidDate(int month, int year);
 
     public IEnumerable<Payment> FilterByStatus(PaymentStatus status);
 

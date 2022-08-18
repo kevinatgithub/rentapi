@@ -1,6 +1,5 @@
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\WenasRoomForRent.Services.deps.json
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\WenasRoomForRent.Services.dll
-C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\ref\WenasRoomForRent.Services.dll
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\WenasRoomForRent.Services.pdb
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\WenasRoomForRent.Domain.dll
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\bin\Debug\net6.0\WenasRoomForRent.Repository.dll
@@ -13,5 +12,6 @@ C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\ob
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\WenasRoomForRent.Services.csproj.CoreCompileInputs.cache
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\WenasRoomForRent.Services.csproj.CopyComplete
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\WenasRoomForRent.Services.dll
-C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\ref\WenasRoomForRent.Services.dll
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\refint\WenasRoomForRent.Services.dll
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\WenasRoomForRent.Services.pdb
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Services\obj\Debug\net6.0\ref\WenasRoomForRent.Services.dll

@@ -1,27 +1,30 @@
+using Microsoft.EntityFrameworkCore;
+using WenasRoomForRent.Api;
 using WenasRoomForRent.Repository;
-using WenasRoomForRent.Repository.InMemory;
-using WenasRoomForRent.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddSingleton<AppInMemoryContext>();
-builder.Services.AddScoped<IRoomRepository, RoomRepository>();
-builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
-builder.Services.AddScoped<IRoomService, RoomService>();
-builder.Services.AddScoped<IProfileService, ProfileService>();
-builder.Services.AddScoped<IRentRepository, RentRepository>();
-builder.Services.AddScoped<IRentService, RentService>();
-builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
-builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddDbContext<AppEFContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ApiDatabase"));
+});
+builder.Services.AddSqlDbRepositories();
+builder.Services.AddServices();
+builder.Services.AddRequestLogger();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors();
 
 var app = builder.Build();
 
+app.UseCors(x => x
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader()); // allow credentials
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -29,7 +32,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

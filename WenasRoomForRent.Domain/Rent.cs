@@ -1,7 +1,10 @@
-﻿namespace WenasRoomForRent.Domain;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WenasRoomForRent.Domain;
 
 public class Rent
 {
+    [Key]
     public int Id { get; set; }
     public int profileId { get; set; }
     public int roomId { get; set; }

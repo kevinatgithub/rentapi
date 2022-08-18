@@ -41,8 +41,6 @@ public class PaymentRepository : IPaymentRepository
         return payments;
     }
 
-    public IEnumerable<Payment> FilterByPaidDate(int month, int year) => context.Payments.Where(p => p.PaidForTheYearOf.Equals(year) && p.PaidForTheMonthOf.Equals(month));
-
     public IEnumerable<Payment> FilterByStatus(PaymentStatus status) => context.Payments.Where(p => p.Status.Equals(status));
 
     public IEnumerable<Payment> GetAll() => context.Payments;
@@ -58,8 +56,8 @@ public class PaymentRepository : IPaymentRepository
             npayment.Balance = payment.Balance;
             npayment.PaidAmount = payment.PaidAmount;
             npayment.PaidDateTime = payment.PaidDateTime;
-            npayment.PaidForTheMonthOf = payment.PaidForTheMonthOf;
-            npayment.PaidForTheYearOf = payment.PaidForTheYearOf;
+            npayment.PeriodCoveredStartDate = payment.PeriodCoveredStartDate;
+            npayment.PeriodCoveredEndDate = payment.PeriodCoveredEndDate;
             npayment.rentId = payment.rentId;
             npayment.Status = payment.Status;
         }

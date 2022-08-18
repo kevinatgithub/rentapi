@@ -20,8 +20,6 @@ public class PaymentService : IPaymentService
 
     public IEnumerable<Payment> FilterByPaidDate(DateTime? startDate, DateTime? endDate) => repository.FilterByPaidDate(startDate, endDate);
 
-    public IEnumerable<Payment> FilterByPaidDate(int month, int year) => repository.FilterByPaidDate(month, year);
-
     public IEnumerable<Payment> FilterByStatus(PaymentStatus status) => repository.FilterByStatus(status);
 
     public IEnumerable<Payment> FindByProfileId(int profileId)

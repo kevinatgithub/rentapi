@@ -1,11 +1,12 @@
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\bin\Debug\net6.0\WenasRoomForRent.Domain.deps.json
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\bin\Debug\net6.0\WenasRoomForRent.Domain.dll
-C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\bin\Debug\net6.0\ref\WenasRoomForRent.Domain.dll
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\bin\Debug\net6.0\WenasRoomForRent.Domain.pdb
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\obj\Debug\net6.0\WenasRoomForRent.Domain.csproj.AssemblyReference.cache
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\obj\Debug\net6.0\WenasRoomForRent.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\obj\Debug\net6.0\WenasRoomForRent.Domain.AssemblyInfoInputs.cache
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\obj\Debug\net6.0\WenasRoomForRent.Domain.AssemblyInfo.cs
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\obj\Debug\net6.0\WenasRoomForRent.Domain.csproj.CoreCompileInputs.cache
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\obj\Debug\net6.0\WenasRoomForRent.Domain.dll
-C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\obj\Debug\net6.0\ref\WenasRoomForRent.Domain.dll
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\obj\Debug\net6.0\refint\WenasRoomForRent.Domain.dll
 C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\obj\Debug\net6.0\WenasRoomForRent.Domain.pdb
+C:\Users\cg255yl\source\repos\wrfr\WenasRoomForRent\WenasRoomForRent.Domain\obj\Debug\net6.0\ref\WenasRoomForRent.Domain.dll

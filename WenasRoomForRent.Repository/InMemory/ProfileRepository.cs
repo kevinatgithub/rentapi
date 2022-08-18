@@ -27,9 +27,9 @@ public class ProfileRepository : IProfileRepository
         }
     }
 
-    public IEnumerable<Profile> Find(string name) => context.Profiles.Where(p => p.Name.Contains(name, StringComparison.InvariantCultureIgnoreCase));
+    public IEnumerable<Profile> Find(string name) => context.Profiles.Where(p => p.Name.Contains(name, StringComparison.InvariantCultureIgnoreCase)).OrderBy(p => p.Name);
 
-    public IEnumerable<Profile> GetAll() => context.Profiles;
+    public IEnumerable<Profile> GetAll() => context.Profiles.OrderBy(p => p.Name);
 
     public Profile GetById(int id) => context.Profiles.FirstOrDefault(p => p.Id == id);
 

@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WenasRoomForRent.Api.Filters;
 using WenasRoomForRent.Api.Models;
 using WenasRoomForRent.Domain;
 using WenasRoomForRent.Services;
 
 namespace WenasRoomForRent.Api.Controllers;
 
+[RequestLogger]
 [Route("api/[controller]")]
 [ApiController]
 public class RentsController : ControllerBase
@@ -23,7 +25,7 @@ public class RentsController : ControllerBase
     [HttpGet]
     public IActionResult GetAll() => Ok(rentService.GetAll());
 
-    [HttpGet("findByProfileId/{profileId}")]
+    [HttpGet("findByProfileId/{id}")]
     public IActionResult GetByProfileId(int id) => Ok(rentService.FindByProfileId(id));
 
     [HttpGet("findByRoomId/{roomId}")]
@@ -94,5 +96,24 @@ public class RentsController : ControllerBase
         };
 
         return Ok(rentService.Create(rent));
+    }
+
+    [HttpPut("terminate")]
+    public IActionResult TerminateRent(TerminateModel model)
+    {
+        var rents = rentService.FindByProfileId(model.ProfileId);
+        if (!rents.Any())
+        {
+            return Ok();
+        }
+
+        var rent = rents.FirstOrDefault(r => r.roomId == model.RoomId && r.Status == RentStatus.Active);
+        if (rent != null)
+        {
+            rent.Status = RentStatus.Inactive;
+            rent.EndDateTime = DateTime.UtcNow;
+            rentService.Update(rent);
+        }
+        return Ok();
     }
 }

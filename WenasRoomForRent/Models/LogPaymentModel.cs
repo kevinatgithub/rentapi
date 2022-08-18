@@ -3,7 +3,7 @@
     public class LogPaymentModel
     {
         public int rentId { get; set; }
-        public int PaidForTheMonthOf { get; set; }
-        public int PaidForTheYearOf { get; set; }
+        public DateTime PeriodStartDateTime { get; set; }
+        public DateTime PeriodEndDateTime { get; set; }
     }
 }

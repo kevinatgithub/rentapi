@@ -1,14 +1,19 @@
-﻿namespace WenasRoomForRent.Domain;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WenasRoomForRent.Domain;
 
 public class Payment
 {
+    [Key]
     public int Id { get; set; }
     public int rentId { get; set; }
     public decimal TotalAmount { get; set; } 
     public decimal PaidAmount { get; set; }
+
     public decimal Balance { get; set; } 
+    public DateTime PeriodCoveredStartDate { get; set; }
+    public DateTime PeriodCoveredEndDate { get; set; }
     public DateTime PaidDateTime { get; set; }
-    public int PaidForTheMonthOf { get; set; }
-    public int PaidForTheYearOf { get; set; }
     public PaymentStatus Status { get; set; }
+    public string? Particulars { get; set; }
 }

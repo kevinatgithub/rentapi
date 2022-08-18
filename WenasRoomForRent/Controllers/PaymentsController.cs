@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WenasRoomForRent.Api.Filters;
 using WenasRoomForRent.Api.Models;
 using WenasRoomForRent.Domain;
 using WenasRoomForRent.Services;
 
 namespace WenasRoomForRent.Api.Controllers;
 
+[RequestLogger]
 [Route("api/[controller]")]
 [ApiController]
 public class PaymentsController : ControllerBase
@@ -31,9 +33,6 @@ public class PaymentsController : ControllerBase
 
     [HttpPost("findByDate")]
     public IActionResult FilterByPaidDate(FilterPaymentByDateModel model) => Ok(paymentService?.FilterByPaidDate(model?.StartDate, model?.EndtDate));
-
-    [HttpPost("findByMonthAndYear")]
-    public IActionResult FilterByPaidDate(FilterPaymentByMonthAndYearModel model) => Ok(paymentService?.FilterByPaidDate(model.Month, model.Year));
 
     [HttpGet("findByStatus/{status}")]
     public IActionResult FilterByStatus(string status)
@@ -65,8 +64,8 @@ public class PaymentsController : ControllerBase
             PaidAmount = paidAmount,
             Balance = totalAmount - paidAmount,
             PaidDateTime = DateTime.UtcNow,
-            PaidForTheMonthOf = model.PaidForTheMonthOf,
-            PaidForTheYearOf = model.PaidForTheYearOf,
+            PeriodCoveredStartDate = model.PeriodStartDateTime,
+            PeriodCoveredEndDate = model.PeriodEndDateTime,
             Status = PaymentStatus.Recieved
         };
         return Ok(paymentService.Create(payment));
@@ -92,8 +91,8 @@ public class PaymentsController : ControllerBase
             PaidAmount = paidAmount,
             Balance = totalAmount - paidAmount,
             PaidDateTime = DateTime.UtcNow,
-            PaidForTheMonthOf = model.PaidForTheMonthOf,
-            PaidForTheYearOf = model.PaidForTheYearOf,
+            PeriodCoveredStartDate = model.PeriodStartDateTime,
+            PeriodCoveredEndDate = model.PeriodEndDateTime,
             Status = PaymentStatus.Pending
         };
         return Ok(paymentService.Create(payment));
