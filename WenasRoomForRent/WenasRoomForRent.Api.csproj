@@ -18,4 +18,8 @@
     <ProjectReference Include="..\WenasRoomForRent.Services\WenasRoomForRent.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="www\" />
+  </ItemGroup>
+
 </Project>
