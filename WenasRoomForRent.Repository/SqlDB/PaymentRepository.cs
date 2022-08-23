@@ -44,7 +44,7 @@ public class PaymentRepository : IPaymentRepository
 
     public IEnumerable<Payment> FilterByStatus(PaymentStatus status) => context.Payments.Where(p => p.Status.Equals(status)).ToList();
 
-    public IEnumerable<Payment> GetAll() => context.Payments.ToList();
+    public IEnumerable<Payment> GetAll() => context.Payments.OrderByDescending(p => p.PaidDateTime).ToList();
 
     public Payment GetById(int id) => context.Payments.Find(id);
 
@@ -62,6 +62,7 @@ public class PaymentRepository : IPaymentRepository
             npayment.rentId = payment.rentId;
             npayment.Status = payment.Status;
             npayment.Particulars = payment.Particulars;
+            npayment.PaymentForRoom = payment.PaymentForRoom;
             context.SaveChanges();
         }
     }

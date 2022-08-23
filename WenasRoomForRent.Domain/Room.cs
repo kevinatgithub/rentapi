@@ -9,4 +9,5 @@ public class Room
     public string Name { get; set; }
     public decimal PricePerMonth { get; set; }
     public string Remarks { get; set; }
+    public int Capacity { get; set; }
 }

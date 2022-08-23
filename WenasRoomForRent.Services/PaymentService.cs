@@ -7,11 +7,15 @@ public class PaymentService : IPaymentService
 {
     private readonly IPaymentRepository repository;
     private readonly IRentRepository rentRepository;
+    private readonly IRoomRepository roomRepository;
+    private readonly IProfileRepository profileRepository;
 
-    public PaymentService(IPaymentRepository repository, IRentRepository rentRepository)
+    public PaymentService(IPaymentRepository repository, IRentRepository rentRepository, IRoomRepository roomRepository, IProfileRepository profileRepository)
     {
         this.repository = repository ?? throw new ArgumentNullException(nameof(repository));
         this.rentRepository = rentRepository ?? throw new ArgumentNullException(nameof(rentRepository));
+        this.roomRepository = roomRepository ?? throw new ArgumentNullException(nameof(roomRepository));
+        this.profileRepository = profileRepository ?? throw new ArgumentNullException(nameof(profileRepository));
     }
 
     public Payment Create(Payment payment) => repository.Create(payment);
@@ -51,6 +55,31 @@ public class PaymentService : IPaymentService
     public IEnumerable<Payment> GetAll() => repository.GetAll();
 
     public Payment GetById(int id) => repository.GetById(id);
+
+    public IEnumerable<Payment> Search(string term)
+    {
+        var payments = GetAll();
+        var npayments = new List<Payment>();
+
+        if (term != "")
+        {
+            foreach (var pay in payments)
+            {
+                var rent = rentRepository.GetById(pay.rentId);
+                var profile = profileRepository.GetById(rent.profileId);
+                var room = roomRepository.GetById(rent.roomId);
+                if (profile.Name.Contains(term, StringComparison.InvariantCultureIgnoreCase) || room.Name.Contains(term, StringComparison.InvariantCultureIgnoreCase)){
+                    npayments.Add(pay);
+                }
+            }
+        }
+        else
+        {
+            npayments = payments.ToList();
+        }
+
+        return npayments;
+    }
 
     public void Update(Payment payment) => repository.Update(payment);
 

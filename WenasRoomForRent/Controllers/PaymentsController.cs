@@ -25,6 +25,9 @@ public class PaymentsController : ControllerBase
     [HttpGet]
     public IActionResult GetAll() => Ok(paymentService.GetAll());
 
+    [HttpGet("find/{term}")]
+    public IActionResult GetAll(string term) => Ok(paymentService.Search(term));
+
     [HttpGet("findByRoomId/{roomId}")]
     public IActionResult FindByRoomId(int roomId) => Ok(paymentService?.FindByRoomId(roomId));
 
@@ -62,16 +65,28 @@ public class PaymentsController : ControllerBase
             rentId = rent.Id,
             TotalAmount = totalAmount,
             PaidAmount = paidAmount,
-            Balance = totalAmount - paidAmount,
-            PaidDateTime = DateTime.UtcNow,
-            PeriodCoveredStartDate = model.PeriodStartDateTime,
-            PeriodCoveredEndDate = model.PeriodEndDateTime,
-            Status = PaymentStatus.Recieved
+            Balance = model.Balance != null ? (decimal)model.Balance : totalAmount - paidAmount,
+            PaidDateTime = model.PaidDateTime != null ? model.PaidDateTime.Value : DateTime.UtcNow,
+            PeriodCoveredStartDate = model.PeriodStartDate.HasValue ? model.PeriodStartDate.Value: null,
+            PeriodCoveredEndDate = model.PeriodEndDate.HasValue ? model.PeriodEndDate.Value: null,
+            Status = PaymentStatus.Recieved,
+            Particulars = model.Particulars,
+            PaymentForRoom = model.PaymentForRoom,
+            PaidBy = model.PaidBy
         };
         return Ok(paymentService.Create(payment));
     }
 
+    [HttpDelete]
+    public IActionResult DeleteById(int id)
+    {
+        paymentService.DeleteById(id);
+        return Ok();
+    }
+
+    #region obsololete
     [HttpPost("log")]
+    [Obsolete]
     public IActionResult Log(LogPaymentModel model)
     {
         var rent = rentService.GetById(model.rentId);
@@ -99,6 +114,7 @@ public class PaymentsController : ControllerBase
     }
 
     [HttpPost("{id}/pay")]
+    [Obsolete]
     public IActionResult Pay(int id, decimal amount)
     {
         var payment = paymentService.GetById(id);
@@ -114,6 +130,7 @@ public class PaymentsController : ControllerBase
     }
 
     [HttpPut]
+    [Obsolete]
     public IActionResult Update(Payment payment)
     {
         var pyment = paymentService.GetById(payment.Id);
@@ -123,11 +140,5 @@ public class PaymentsController : ControllerBase
         paymentService.Update(payment);
         return Ok();
     }
-
-    [HttpDelete]
-    public IActionResult DeleteById(int id)
-    {
-        paymentService.DeleteById(id);
-        return Ok();
-    }
+    #endregion
 }

@@ -42,6 +42,7 @@ public class RoomRepository : IRoomRepository
             nroom.Remarks = room.Remarks;
             nroom.PricePerMonth = room.PricePerMonth;
             nroom.Name = room.Name;
+            nroom.Capacity = room.Capacity;
             context.SaveChanges();
         }
     }

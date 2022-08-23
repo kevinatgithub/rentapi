@@ -23,4 +23,6 @@ public interface IPaymentService
     public void Update(Payment payment);
 
     public void DeleteById(int id);
+
+    IEnumerable<Payment> Search(string term);
 }
