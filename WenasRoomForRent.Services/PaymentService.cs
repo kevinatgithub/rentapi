@@ -56,6 +56,17 @@ public class PaymentService : IPaymentService
 
     public Payment GetById(int id) => repository.GetById(id);
 
+    public void Print(int id)
+    {
+        var payment = repository.GetById(id);
+        if (payment != null)
+        {
+            payment.LastPrintDate = DateTime.UtcNow;
+            payment.PrintedTime += 1;
+            repository.Update(payment);
+        }
+    }
+
     public IEnumerable<Payment> Search(string term)
     {
         var payments = GetAll();

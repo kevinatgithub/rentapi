@@ -42,6 +42,7 @@ public class ProfileRepository : IProfileRepository
             nprofile.ContactNumber = profile.ContactNumber;
             nprofile.Name = profile.Name;
             nprofile.Gender = profile.Gender;
+            nprofile.Remarks = profile.Remarks;
             context.SaveChanges();
         }
     }

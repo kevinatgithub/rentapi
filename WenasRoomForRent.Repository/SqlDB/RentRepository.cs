@@ -30,6 +30,8 @@ public class RentRepository : IRentRepository
 
     public IEnumerable<Rent> GetAll() => context.Rents.ToList();
 
+    public IEnumerable<Rent> GetAllByProfileId(int id) => context.Rents.Where(r => r.profileId.Equals(id)).ToList();
+
     public IEnumerable<Rent> GetAllByRoomId(int id) => context.Rents.Where(r => r.roomId == id && r.Status == RentStatus.Active).ToList();
 
     public Rent GetById(int id) => context.Rents.FirstOrDefault(r => r.Id == id);

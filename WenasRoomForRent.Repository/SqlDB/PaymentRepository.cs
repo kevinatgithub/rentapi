@@ -63,6 +63,8 @@ public class PaymentRepository : IPaymentRepository
             npayment.Status = payment.Status;
             npayment.Particulars = payment.Particulars;
             npayment.PaymentForRoom = payment.PaymentForRoom;
+            npayment.PrintedTime = payment.PrintedTime;
+            npayment.LastPrintDate = payment.LastPrintDate;
             context.SaveChanges();
         }
     }

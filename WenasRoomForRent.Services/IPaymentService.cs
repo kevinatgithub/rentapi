@@ -18,6 +18,8 @@ public interface IPaymentService
 
     public Payment Create(Payment payment);
 
+    public void Print(int id);
+
     public void UpdateStatus(int id, PaymentStatus status);
 
     public void Update(Payment payment);

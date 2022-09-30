@@ -77,6 +77,13 @@ public class PaymentsController : ControllerBase
         return Ok(paymentService.Create(payment));
     }
 
+    [HttpPost("{id}/print")]
+    public IActionResult Print(int id)
+    {
+        paymentService.Print(id);
+        return Ok();
+    }
+
     [HttpDelete]
     public IActionResult DeleteById(int id)
     {

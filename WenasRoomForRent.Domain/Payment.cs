@@ -17,4 +17,6 @@ public class Payment
     public PaymentStatus Status { get; set; }
     public string? Particulars { get; set; }
     public string PaidBy { get; set; }
+    public DateTime? LastPrintDate { get; set; }
+    public int PrintedTime { get; set; } = 0;
 }

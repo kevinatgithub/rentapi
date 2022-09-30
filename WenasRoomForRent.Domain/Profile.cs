@@ -9,4 +9,5 @@ public class Profile
     public string Name { get; set; }
     public string Gender { get; set; }
     public string ContactNumber { get; set; }
+    public string? Remarks { get; set; }
 }

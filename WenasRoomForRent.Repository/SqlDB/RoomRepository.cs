@@ -32,7 +32,7 @@ public class RoomRepository : IRoomRepository
 
     public Room GetById(int id) => context.Rooms.FirstOrDefault(r => r.Id == id);
 
-    public IEnumerable<Room> GetByName(string name) => context.Rooms.Where(r => r.Name.Contains(name, StringComparison.InvariantCultureIgnoreCase)).ToList();
+    public IEnumerable<Room> GetByName(string name) => context.Rooms.Where(r => r.Name.ToUpper().Contains(name.ToUpper())).ToList();
 
     public void Update(Room room)
     {

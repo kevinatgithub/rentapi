@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WenasRoomForRent.Repository;
 
@@ -11,9 +12,10 @@ using WenasRoomForRent.Repository;
 namespace WenasRoomForRent.Repository.Migrations
 {
     [DbContext(typeof(AppEFContext))]
-    partial class AppEFContextModelSnapshot : ModelSnapshot
+    [Migration("20220824145002_added profile remarks")]
+    partial class addedprofileremarks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,9 +34,6 @@ namespace WenasRoomForRent.Repository.Migrations
 
                     b.Property<decimal>("Balance")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime?>("LastPrintDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<decimal>("PaidAmount")
                         .HasColumnType("decimal(18,2)");
@@ -57,9 +56,6 @@ namespace WenasRoomForRent.Repository.Migrations
 
                     b.Property<DateTime?>("PeriodCoveredStartDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("PrintedTime")
-                        .HasColumnType("int");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
