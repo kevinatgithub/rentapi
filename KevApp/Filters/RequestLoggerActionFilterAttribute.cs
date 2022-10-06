@@ -12,8 +12,11 @@ namespace KevApp.Api.Filters
 
         public override void OnActionExecuting(ActionExecutingContext context)
         {
-            string actionName = context.ActionDescriptor.DisplayName;
-            requestLogService.Log(actionName);
+            if (context.ActionDescriptor.DisplayName != null)
+            {
+                string actionName = context.ActionDescriptor.DisplayName;
+                requestLogService.Log(actionName);
+            }
 
 
             base.OnActionExecuting(context);

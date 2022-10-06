@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using KevApp.Api;
 using KevApp.Repository;
+using KevApp.Api.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("ApiDatabase"));
 });
+builder.Services.AddSwaggerAuthorizeHeader().AddIdentity(builder.Configuration);
 builder.Services.AddSqlDbRepositories();
 builder.Services.AddServices();
 builder.Services.AddRequestLogger();
@@ -40,7 +42,7 @@ app.UseStaticFiles(new StaticFileOptions
 });
 
 //app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

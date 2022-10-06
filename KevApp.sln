@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KevApp.Domain", "KevApp.Dom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KevApp.Repository", "KevApp.Repository\KevApp.Repository.csproj", "{975DF5D6-35CD-4F13-A093-65E33B2E707E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KevApp.Services", "KevApp.Services\KevApp.Services.csproj", "{6BCDBC06-60F3-46CA-936F-0771A7216CD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KevApp.Services", "KevApp.Services\KevApp.Services.csproj", "{02D34A19-381F-4C38-A00B-E3B11526422A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{975DF5D6-35CD-4F13-A093-65E33B2E707E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{975DF5D6-35CD-4F13-A093-65E33B2E707E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{975DF5D6-35CD-4F13-A093-65E33B2E707E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6BCDBC06-60F3-46CA-936F-0771A7216CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BCDBC06-60F3-46CA-936F-0771A7216CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BCDBC06-60F3-46CA-936F-0771A7216CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BCDBC06-60F3-46CA-936F-0771A7216CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02D34A19-381F-4C38-A00B-E3B11526422A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02D34A19-381F-4C38-A00B-E3B11526422A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02D34A19-381F-4C38-A00B-E3B11526422A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02D34A19-381F-4C38-A00B-E3B11526422A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

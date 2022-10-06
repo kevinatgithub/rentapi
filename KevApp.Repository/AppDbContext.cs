@@ -1,10 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using KevApp.Domain;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace KevApp.Repository;
 
-public class AppDbContext : DbContext
+public class AppDbContext : IdentityDbContext
 {
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     public AppDbContext(DbContextOptions options) : base(options)
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     {
     }
 
@@ -16,5 +20,8 @@ public class AppDbContext : DbContext
         {
             property.SetColumnType("decimal(18,2)");
         }
+        base.OnModelCreating(modelBuilder);
     }
+
+    public DbSet<City> Cities { get; set; }
 }
